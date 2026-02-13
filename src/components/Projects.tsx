@@ -8,7 +8,7 @@ const Projects = () => {
       language: 'JavaScript',
       technologies: ['React', 'Node.js', 'MongoDB', 'Express'],
       image: 'https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-      link: 'https://github.com/chathunikathammitaarachchi/Auditorium-Booking-System',
+      link: 'https://github.com/chathunikathammitaarachchi/auditorium',
       category: 'Management System',
     },
     {
