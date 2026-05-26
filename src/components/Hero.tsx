@@ -4,10 +4,10 @@ const Hero = () => {
   return (
     <section id="home" className="min-h-screen flex items-center justify-center bg-[#0B1121] pt-16 overflow-hidden relative">
       {/* Professional Dark Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-[#0B1121] to-slate-900"></div>
-      <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-blue-500/10 via-transparent to-purple-500/10"></div>
-      <div className="absolute bottom-0 right-0 w-full h-full bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-stops))] from-cyan-500/10 via-transparent to-indigo-500/10"></div>
-      <div className="absolute inset-0 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:20px_20px] opacity-[0.03]"></div>
+      <div className="absolute inset-0 bg-linear-to-br from-slate-900 via-[#0B1121] to-slate-900"></div>
+      <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(,var(--tw-gradient-stops))] from-blue-500/10 via-transparent to-purple-500/10"></div>
+      <div className="absolute bottom-0 right-0 w-full h-full bg-[radial-gradient(,var(--tw-gradient-stops))] from-cyan-500/10 via-transparent to-indigo-500/10"></div>
+      <div className="absolute inset-0 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] bg-size-[] opacity-[0.03]"></div>
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 flex flex-col md:flex-row items-center justify-between relative z-10">
         <div className="md:w-1/2 text-center md:text-left z-10">
@@ -19,7 +19,7 @@ const Hero = () => {
           
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold text-white mb-6 tracking-tight leading-tight">
             Hi, I'm <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 animate-gradient">
+            <span className="text-transparent bg-clip-text bg-linear-to-r from-cyan-400 via-blue-500 to-purple-600 animate-gradient">
               Chathunika Thammitaarachchi
             </span>
           </h1>
@@ -61,7 +61,7 @@ const Hero = () => {
           </div>
           
           <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 justify-center md:justify-start mb-10">
-            <a href="#projects" className="group px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-600 text-white rounded-2xl hover:from-cyan-500 hover:to-blue-500 transition-all shadow-lg shadow-cyan-500/20 hover:shadow-cyan-500/40 hover:-translate-y-1 flex items-center justify-center font-semibold">
+            <a href="#projects" className="group px-8 py-4 bg-linear-to-r from-cyan-600 to-blue-600 text-white rounded-2xl hover:from-cyan-500 hover:to-blue-500 transition-all shadow-lg shadow-cyan-500/20 hover:shadow-cyan-500/40 hover:-translate-y-1 flex items-center justify-center font-semibold">
               View My Work
               <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </a>
@@ -85,7 +85,7 @@ const Hero = () => {
         </div>
         
         <div className="md:w-1/2 mt-16 md:mt-0 flex justify-center relative">
-          <div className="relative w-80 h-80 md:w-[500px] md:h-[500px]">
+          <div className="relative w-80 h-80 md:w-125 md:h-125">
              {/* Enhanced Professional Radiant Blobs */}
              <div className="absolute top-0 right-0 w-80 h-80 bg-blue-500 rounded-full mix-blend-multiply filter blur-[100px] opacity-20 animate-blob"></div>
              <div className="absolute bottom-0 left-0 w-80 h-80 bg-cyan-500 rounded-full mix-blend-multiply filter blur-[100px] opacity-20 animate-blob animation-delay-2000"></div>
@@ -99,16 +99,16 @@ const Hero = () => {
              </div>
              
              <div className="absolute -bottom-6 -left-6 z-20">
-               <div className="bg-gradient-to-br from-white to-green-50 p-4 rounded-3xl shadow-2xl border border-green-100 backdrop-blur-sm">
+               <div className="bg-linear-to-br from-white to-green-50 p-4 rounded-3xl shadow-2xl border border-green-100 backdrop-blur-sm">
                  <Users className="w-8 h-8 text-green-500" />
                </div>
              </div>
              
              {/* Professional Profile Container with Radiant Effects */}
              <div className="relative w-72 h-72 md:w-96 md:h-96 mx-auto mt-8">
-               <div className="absolute inset-0 bg-gradient-to-tr from-blue-600 via-indigo-600 to-purple-600 rounded-[3rem] rotate-6 opacity-20 animate-pulse shadow-2xl"></div>
-               <div className="absolute inset-1 bg-gradient-to-br from-white to-blue-50/50 rounded-[2.8rem] shadow-2xl backdrop-blur-sm"></div>
-               <div className="absolute inset-0 bg-gradient-to-tr from-blue-500/10 via-transparent to-purple-500/10 rounded-[3rem] animate-pulse"></div>
+               <div className="absolute inset-0 bg-linear-to-tr from-blue-600 via-indigo-600 to-purple-600 rounded-[3rem] rotate-6 opacity-20 animate-pulse shadow-2xl"></div>
+               <div className="absolute inset-1 bg-linear-to-br from-white to-blue-50/50 rounded-[2.8rem] shadow-2xl backdrop-blur-sm"></div>
+               <div className="absolute inset-0 bg-linear-to-tr from-blue-500/10 via-transparent to-purple-500/10 rounded-[3rem] animate-pulse"></div>
                <img 
                  src="https://github.com/chathunikathammitaarachchi.png" 
                  alt="Chathunika Thammitaarachchi - Software Engineer"
@@ -116,7 +116,7 @@ const Hero = () => {
                />
                
                {/* Enhanced Professional Status */}
-               <div className="absolute -bottom-3 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-green-400 to-emerald-500 w-8 h-8 rounded-full border-4 border-white shadow-xl animate-pulse flex items-center justify-center">
+               <div className="absolute -bottom-3 left-1/2 transform -translate-x-1/2 bg-linear-to-r from-green-400 to-emerald-500 w-8 h-8 rounded-full border-4 border-white shadow-xl animate-pulse flex items-center justify-center">
                  <div className="w-3 h-3 bg-white rounded-full"></div>
                </div>
              </div>

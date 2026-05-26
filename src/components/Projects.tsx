@@ -70,13 +70,13 @@ const Projects = () => {
   return (
     <section id="projects" className="py-20 bg-[#0B1121] relative overflow-hidden">
       {/* Professional Dark Background Layers */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-blue-900/20 via-transparent to-purple-900/20"></div>
-      <div className="absolute top-0 left-0 w-full h-1/2 bg-gradient-to-br from-indigo-900/10 via-transparent to-transparent"></div>
-      <div className="absolute bottom-0 right-0 w-full h-1/2 bg-gradient-to-tl from-blue-900/10 via-transparent to-transparent"></div>
+      <div className="absolute inset-0 bg-[radial-gradient(,var(--tw-gradient-stops))] from-blue-900/20 via-transparent to-purple-900/20"></div>
+      <div className="absolute top-0 left-0 w-full h-1/2 bg-linear-to-br from-indigo-900/10 via-transparent to-transparent"></div>
+      <div className="absolute bottom-0 right-0 w-full h-1/2 bg-linear-to-tl from-blue-900/10 via-transparent to-transparent"></div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-bold text-white mb-4 tracking-tight">My Projects</h2>
-          <div className="w-20 h-1.5 bg-gradient-to-r from-cyan-400 to-blue-600 mx-auto mb-6 rounded-full"></div>
+          <div className="w-20 h-1.5 bg-linear-to-r from-cyan-400 to-blue-600 mx-auto mb-6 rounded-full"></div>
           <p className="text-slate-400 max-w-2xl mx-auto text-lg">
              A showcase of my recent work in software engineering. View more on <a href="https://www.behance.net/chathunika2001" className="text-cyan-400 font-semibold hover:text-cyan-300 transition-colors">Behance</a>.
           </p>
@@ -85,7 +85,7 @@ const Projects = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
             <div key={index} className="group bg-slate-800/50 rounded-3xl flex flex-col h-full border border-slate-700/50 shadow-lg hover:shadow-cyan-500/10 hover:-translate-y-2 transition-all duration-500 relative overflow-hidden backdrop-blur-sm">
-               <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-cyan-400 to-blue-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
+               <div className="absolute top-0 left-0 w-full h-1 bg-linear-to-r from-cyan-400 to-blue-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
                
               {/* Project Image */}
               <div className="relative h-48 overflow-hidden rounded-t-3xl">
@@ -94,7 +94,7 @@ const Projects = () => {
                   alt={project.title}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0B1121] to-transparent opacity-60 group-hover:opacity-40 transition-opacity duration-300"></div>
+                <div className="absolute inset-0 bg-linear-to-t from-[#0B1121] to-transparent opacity-60 group-hover:opacity-40 transition-opacity duration-300"></div>
                 <div className="absolute top-4 right-4 flex gap-2">
                   <a 
                     href={project.link} 
@@ -113,12 +113,12 @@ const Projects = () => {
                 </div>
               </div>
               
-              <div className="p-6 flex flex-col flex-grow">
+              <div className="p-6 flex flex-col grow">
                 <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">
                   {project.title}
                 </h3>
                 
-                <p className="text-slate-400 mb-4 flex-grow leading-relaxed text-sm">
+                <p className="text-slate-400 mb-4 grow leading-relaxed text-sm">
                   {project.description}
                 </p>
                 

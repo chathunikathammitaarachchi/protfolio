@@ -3,13 +3,13 @@ import { Heart, Github, Linkedin, Mail } from 'lucide-react';
 const Footer = () => {
   return (
     <footer className="bg-slate-950 text-slate-300 py-12 relative overflow-hidden border-t border-slate-900">
-      <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-cyan-500/50 to-transparent"></div>
+      <div className="absolute top-0 left-0 w-full h-px bg-linear-to-r from-transparent via-cyan-500/50 to-transparent"></div>
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
           {/* Brand Column */}
           <div className="col-span-1 md:col-span-1">
-            <h3 className="text-2xl font-bold text-white mb-4 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent inline-block">
+            <h3 className="text-2xl font-bold text-transparent bg-clip-text bg-linear-to-r from-cyan-400 to-blue-500 inline-block">
               Chathunika
             </h3>
             <p className="text-slate-400 mb-6 leading-relaxed">

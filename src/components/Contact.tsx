@@ -35,13 +35,13 @@ const Contact = () => {
   return (
     <section id="contact" className="py-20 bg-[#0B1121] relative overflow-hidden">
       {/* Professional Dark Background */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,_var(--tw-gradient-stops))] from-indigo-900/20 via-transparent to-cyan-900/20"></div>
-      <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-bl from-blue-900/10 via-transparent to-transparent"></div>
-      <div className="absolute bottom-0 left-0 w-1/2 h-full bg-gradient-to-tr from-indigo-900/10 via-transparent to-transparent"></div>
+      <div className="absolute inset-0 bg-[radial-gradient(,var(--tw-gradient-stops))] from-indigo-900/20 via-transparent to-cyan-900/20"></div>
+      <div className="absolute top-0 right-0 w-1/2 h-full bg-linear-to-bl from-blue-900/10 via-transparent to-transparent"></div>
+      <div className="absolute bottom-0 left-0 w-1/2 h-full bg-linear-to-tr from-indigo-900/10 via-transparent to-transparent"></div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-bold text-white mb-4 tracking-tight">Get In Touch</h2>
-          <div className="w-20 h-1.5 bg-gradient-to-r from-cyan-400 to-blue-600 mx-auto mb-8 rounded-full"></div>
+          <div className="w-20 h-1.5 bg-linear-to-r from-cyan-400 to-blue-600 mx-auto mb-8 rounded-full"></div>
           <p className="text-slate-400 max-w-2xl mx-auto text-lg">
             I'm currently looking for new opportunities. Whether you have a question or just want to say hi, I'll try my best to get back to you!
           </p>
@@ -95,7 +95,7 @@ const Contact = () => {
 
              {isSuccess && (
               <div className="mb-6 p-4 bg-green-900/20 text-green-400 rounded-2xl flex items-center animate-fade-in-down border border-green-500/30 shadow-lg">
-                <CheckCircle className="w-5 h-5 mr-2 flex-shrink-0" />
+                <CheckCircle className="w-5 h-5 mr-2 shrink-0" />
                 <span className="font-semibold">Message sent successfully! I'll be in touch soon.</span>
               </div>
             )}
@@ -146,7 +146,7 @@ const Contact = () => {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full py-4 bg-gradient-to-r from-cyan-600 to-blue-600 text-white rounded-xl font-semibold shadow-lg shadow-cyan-500/20 hover:shadow-cyan-500/40 hover:-translate-y-0.5 transition-all disabled:opacity-70 disabled:hover:translate-y-0 disabled:shadow-none flex items-center justify-center space-x-2 mt-4"
+                className="w-full py-4 bg-linear-to-r from-cyan-600 to-blue-600 text-white rounded-xl font-semibold shadow-lg shadow-cyan-500/20 hover:shadow-cyan-500/40 hover:-translate-y-0.5 transition-all disabled:opacity-70 disabled:hover:translate-y-0 disabled:shadow-none flex items-center justify-center space-x-2 mt-4"
               >
                 {isSubmitting ? (
                   <>

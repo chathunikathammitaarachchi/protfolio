@@ -30,8 +30,8 @@ const Navbar = () => {
     >
       <div className={`mx-auto ${scrolled ? 'w-full' : 'max-w-7xl px-4 sm:px-6 lg:px-8'}`}>
         <div className="flex items-center justify-between h-full">
-          <div className="flex-shrink-0 flex items-center">
-            <span className={`font-bold text-lg md:text-xl tracking-tight ${scrolled ? 'text-white' : 'bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent'}`}>
+          <div className="shrink-0 flex items-center">
+            <span className={`font-bold text-lg md:text-xl tracking-tight ${scrolled ? 'text-white' : 'bg-linear-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent'}`}>
               Chathunika Thammitaarachchi
             </span>
           </div>
@@ -90,7 +90,7 @@ const Navbar = () => {
             <a 
                 href="#contact"
                 onClick={() => setIsOpen(false)}
-                className="mt-4 px-8 py-3 rounded-full bg-gradient-to-r from-cyan-600 to-blue-600 text-white font-semibold shadow-lg shadow-cyan-500/20 hover:shadow-cyan-500/40 w-3/4 text-center"
+                className="mt-4 px-8 py-3 rounded-full bg-linear-to-r from-cyan-600 to-blue-600 text-white font-semibold shadow-lg shadow-cyan-500/20 hover:shadow-cyan-500/40 w-3/4 text-center"
             >
                 Let's Talk
             </a>
