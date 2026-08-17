@@ -41,7 +41,7 @@ const Projects = () => {
       language: 'Python & React Native',
       technologies: ['React Native', 'Python', 'Flask', 'Machine Learning', 'Scikit-Learn', 'REST APIs'],
       image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=800&q=80',
-      repoLink: 'https://github.com/chathunikathammitaarachchi',
+      repoLink: 'https://github.com/chathunikathammitaarachchi/MindTrack',
       liveDemoLink: '',
       category: 'Ongoing Individual Research Project',
       problem: 'Passive sensing of user behavioral features (screen time, mobility, sleep patterns) to detect early psychological risk indicators in real time.',
