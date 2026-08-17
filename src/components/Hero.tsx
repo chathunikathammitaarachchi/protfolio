@@ -1,54 +1,112 @@
-import { Github, Linkedin, Mail, ArrowRight, Download, Award, Users, Coffee } from 'lucide-react';
+import { useEffect, useMemo, useState } from 'react';
+import { motion } from 'framer-motion';
+import {
+  ArrowRight,
+  Award,
+  Coffee,
+  Download,
+  Globe,
+  Github,
+  GraduationCap,
+  Linkedin,
+  Mail,
+  Users,
+} from 'lucide-react';
 
 const Hero = () => {
+  const roles = useMemo(
+    () => ['Full-Stack Developer', 'Software Engineering Student', 'Problem Solver'],
+    []
+  );
+  const [roleIndex, setRoleIndex] = useState(0);
+  const [typedText, setTypedText] = useState('');
+  const [isDeleting, setIsDeleting] = useState(false);
+
+  useEffect(() => {
+    const currentRole = roles[roleIndex];
+    const atEnd = typedText === currentRole;
+    const atStart = typedText === '';
+
+    const timeout = window.setTimeout(
+      () => {
+        if (!isDeleting && atEnd) {
+          setIsDeleting(true);
+          return;
+        }
+
+        if (isDeleting && atStart) {
+          setIsDeleting(false);
+          setRoleIndex((prev) => (prev + 1) % roles.length);
+          return;
+        }
+
+        const nextLength = typedText.length + (isDeleting ? -1 : 1);
+        setTypedText(currentRole.slice(0, nextLength));
+      },
+      atEnd ? 1200 : isDeleting ? 42 : 80
+    );
+
+    return () => window.clearTimeout(timeout);
+  }, [isDeleting, roleIndex, roles, typedText]);
+
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center bg-[#0B1121] pt-16 overflow-hidden relative">
-      {/* Professional Dark Background */}
+    <section id="home" className="relative flex min-h-screen items-center justify-center overflow-hidden bg-[#0B1121] pt-16">
       <div className="absolute inset-0 bg-linear-to-br from-slate-900 via-[#0B1121] to-slate-900"></div>
-      <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(,var(--tw-gradient-stops))] from-blue-500/10 via-transparent to-purple-500/10"></div>
-      <div className="absolute bottom-0 right-0 w-full h-full bg-[radial-gradient(,var(--tw-gradient-stops))] from-cyan-500/10 via-transparent to-indigo-500/10"></div>
-      <div className="absolute inset-0 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] bg-size-[] opacity-[0.03]"></div>
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(34,211,238,0.16),transparent_48%)]"></div>
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_85%,rgba(99,102,241,0.16),transparent_44%)]"></div>
+      <div className="mesh-grid absolute inset-0 opacity-35"></div>
       
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 flex flex-col md:flex-row items-center justify-between relative z-10">
-        <div className="md:w-1/2 text-center md:text-left z-10">
-          {/* Professional Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-2 mb-6 text-sm font-semibold text-cyan-300 bg-cyan-900/20 rounded-full border border-cyan-500/20 backdrop-blur-sm shadow-[0_0_15px_rgba(6,182,212,0.1)]">
-            <Award className="w-4 h-4" />
-            <span>Available for Professional Opportunities</span>
+      <div className="relative z-10 mx-auto flex w-full max-w-384 flex-col items-center justify-between px-3 py-12 sm:px-4 md:flex-row lg:px-6">
+        <motion.div
+          initial={{ opacity: 0, y: 26 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.75 }}
+          className="z-10 text-center md:w-1/2 md:text-left"
+        >
+          <div className="glass-card mb-5 inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-semibold text-cyan-200">
+            <Award className="h-4 w-4" />
+            <span>Available for Internship and Junior Roles</span>
           </div>
-          
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold text-white mb-6 tracking-tight leading-tight">
+
+          <h1 className="mb-6 text-4xl leading-tight font-extrabold tracking-tight text-white md:text-6xl lg:text-7xl">
             Hi, I'm <br />
             <span className="text-transparent bg-clip-text bg-linear-to-r from-cyan-400 via-blue-500 to-purple-600 animate-gradient">
               Chathunika Thammitaarachchi
             </span>
           </h1>
-          
-          <h2 className="text-xl md:text-2xl text-slate-400 mb-6 font-medium">
-            Software Engineering Student & 
-            <span className="text-cyan-400 font-semibold ml-2">Full-Stack Developer</span>
-            <span className="block text-lg text-slate-500 mt-2 font-normal">
-              Crafting innovative solutions with modern web technologies
-            </span>
-          </h2>
-          
-          {/* Professional Stats */}
-          <div className="flex items-center justify-center md:justify-start gap-8 mb-8">
-            <div className="text-center">
-              <div className="text-2xl font-bold text-white">6+</div>
-              <div className="text-sm text-slate-500">Projects</div>
-            </div>
-            <div className="text-center">
-              <div className="text-2xl font-bold text-white">3+</div>
-              <div className="text-sm text-slate-500">Years</div>
-            </div>
-            <div className="text-center">
-              <div className="text-2xl font-bold text-white">10+</div>
-              <div className="text-sm text-slate-500">Technologies</div>
+
+          <h2 className="mb-2 text-xl font-medium text-slate-400 md:text-2xl">Software Engineering Student</h2>
+          <div className="mb-6 min-h-10 text-lg font-semibold text-cyan-300 md:text-2xl" aria-live="polite">
+            <span className="typing-caret">{typedText}</span>
+          </div>
+          <p className="mb-6 block max-w-xl text-lg font-normal text-slate-400">
+            Software Engineering undergraduate with hands-on full-stack experience across React, Spring Boot, Node.js, and MongoDB, focused on clean architecture and reliable delivery.
+          </p>
+
+          <div className="mb-6 inline-flex items-center gap-3 rounded-2xl border border-cyan-500/30 bg-cyan-500/10 px-4 py-3 text-left text-sm text-cyan-100 backdrop-blur-md">
+            <GraduationCap className="h-5 w-5 shrink-0 text-cyan-300" />
+            <div>
+              <p className="font-semibold">Social Proof Badge</p>
+              <p className="text-xs text-cyan-200/90">Software Engineering Undergraduate</p>
             </div>
           </div>
-          
-          <div className="flex flex-wrap gap-3 justify-center md:justify-start mb-10">
+
+          <div className="mb-8 flex items-center justify-center gap-8 md:justify-start">
+            <div className="text-center">
+              <div className="text-2xl font-bold text-white">5</div>
+              <div className="text-sm text-slate-500">Featured Projects</div>
+            </div>
+            <div className="text-center">
+              <div className="text-2xl font-bold text-white">1</div>
+              <div className="text-sm text-slate-500">Internship</div>
+            </div>
+            <div className="text-center">
+              <div className="text-2xl font-bold text-white">2022</div>
+              <div className="text-sm text-slate-500">Started Degree</div>
+            </div>
+          </div>
+
+          <div className="mb-10 flex flex-wrap justify-center gap-3 md:justify-start">
             <span className="px-4 py-2 bg-slate-800/50 text-cyan-300 rounded-full text-sm font-medium border border-cyan-500/20 shadow-sm hover:bg-slate-800 transition-colors">
               React & Node.js
             </span>
@@ -59,13 +117,13 @@ const Hero = () => {
               UI/UX Design
             </span>
           </div>
-          
-          <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 justify-center md:justify-start mb-10">
+
+          <div className="mb-10 flex flex-col justify-center space-y-4 sm:flex-row sm:space-y-0 sm:space-x-4 md:justify-start">
             <a href="#projects" className="group px-8 py-4 bg-linear-to-r from-cyan-600 to-blue-600 text-white rounded-2xl hover:from-cyan-500 hover:to-blue-500 transition-all shadow-lg shadow-cyan-500/20 hover:shadow-cyan-500/40 hover:-translate-y-1 flex items-center justify-center font-semibold">
               View My Work
               <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </a>
-            <a href="/cv/Chathunika-Dayangani-CV.pdf" download="Chathunika-Dayangani-CV.pdf" className="px-8 py-4 bg-white/5 text-white border border-white/10 rounded-2xl hover:bg-white/10 hover:border-white/20 transition-all flex items-center justify-center font-semibold shadow-lg hover:shadow-xl hover:-translate-y-1 backdrop-blur-sm">
+            <a href="/cv/Chathunika-Dayangani-CV.pdf" download="Chathunika-Dayangani-CV.pdf" className="glass-card px-8 py-4 text-white rounded-2xl hover:border-white/20 transition-all flex items-center justify-center font-semibold shadow-lg hover:shadow-xl hover:-translate-y-1">
               <Download className="mr-2 w-5 h-5" />
               Download CV
             </a>
@@ -81,19 +139,25 @@ const Hero = () => {
             <a href="mailto:chathunikathammitaarachchi74@gmail.com" className="p-3 bg-slate-800/50 rounded-xl shadow-md hover:shadow-purple-500/20 hover:text-purple-400 hover:scale-110 transition-all duration-300 border border-slate-700">
               <Mail size={24} />
             </a>
+            <a href="https://www.behance.net/chathunika2001" target="_blank" rel="noopener noreferrer" className="p-3 bg-slate-800/50 rounded-xl shadow-md hover:shadow-emerald-500/20 hover:text-emerald-300 hover:scale-110 transition-all duration-300 border border-slate-700">
+              <Globe size={24} />
+            </a>
           </div>
-        </div>
+        </motion.div>
         
-        <div className="md:w-1/2 mt-16 md:mt-0 flex justify-center relative">
-          <div className="relative w-80 h-80 md:w-125 md:h-125">
-             {/* Enhanced Professional Radiant Blobs */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.96 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ delay: 0.2, duration: 0.7 }}
+          className="relative mt-16 flex justify-center md:mt-0 md:w-1/2"
+        >
+          <div className="relative h-80 w-80 md:h-128 md:w-lg">
              <div className="absolute top-0 right-0 w-80 h-80 bg-blue-500 rounded-full mix-blend-multiply filter blur-[100px] opacity-20 animate-blob"></div>
              <div className="absolute bottom-0 left-0 w-80 h-80 bg-cyan-500 rounded-full mix-blend-multiply filter blur-[100px] opacity-20 animate-blob animation-delay-2000"></div>
              <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-purple-500 rounded-full mix-blend-multiply filter blur-[100px] opacity-20 animate-blob animation-delay-4000"></div>
              
-             {/* Premium Professional Badges */}
              <div className="absolute -top-6 -right-6 z-20">
-               <div className="bg-slate-800/80 p-4 rounded-3xl shadow-2xl border border-slate-700 backdrop-blur-md">
+               <div className="glass-card p-4 rounded-3xl shadow-2xl">
                  <Coffee className="w-8 h-8 text-amber-500" />
                </div>
              </div>
@@ -104,7 +168,6 @@ const Hero = () => {
                </div>
              </div>
              
-             {/* Professional Profile Container with Radiant Effects */}
              <div className="relative w-72 h-72 md:w-96 md:h-96 mx-auto mt-8">
                <div className="absolute inset-0 bg-linear-to-tr from-blue-600 via-indigo-600 to-purple-600 rounded-[3rem] rotate-6 opacity-20 animate-pulse shadow-2xl"></div>
                <div className="absolute inset-1 bg-linear-to-br from-white to-blue-50/50 rounded-[2.8rem] shadow-2xl backdrop-blur-sm"></div>
@@ -112,6 +175,11 @@ const Hero = () => {
                <img 
                  src="https://github.com/chathunikathammitaarachchi.png" 
                  alt="Chathunika Thammitaarachchi - Software Engineer"
+                 width={640}
+                 height={640}
+                 loading="eager"
+                 decoding="async"
+                 fetchPriority="high"
                  className="relative w-full h-full object-cover rounded-[2.8rem] shadow-2xl border-4 border-white rotate-0 hover:rotate-2 transition-all duration-700 hover:scale-105 z-10"
                />
                
@@ -121,10 +189,9 @@ const Hero = () => {
                </div>
              </div>
           </div>
-        </div>
+        </motion.div>
       </div>
       
-      {/* Professional Scroll Indicator */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
         <div className="w-6 h-10 border-2 border-slate-400 rounded-full flex justify-center">
           <div className="w-1 h-2 bg-slate-400 rounded-full mt-2 animate-pulse"></div>

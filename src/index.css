@@ -1,13 +1,44 @@
 @import "tailwindcss";
 
+:root {
+  --glass-bg: rgba(15, 23, 42, 0.55);
+  --glass-border: rgba(148, 163, 184, 0.2);
+}
+
 html {
   scroll-behavior: smooth;
+}
+
+body {
+  background-color: #0b1121;
+  color: #cbd5e1;
+}
+
+.mesh-grid {
+  background-image:
+    linear-gradient(to right, rgba(148, 163, 184, 0.09) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(148, 163, 184, 0.09) 1px, transparent 1px);
+  background-size: 34px 34px;
+  mask-image: radial-gradient(circle at center, black 40%, transparent 80%);
+}
+
+.glass-card {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(12px);
+}
+
+.typing-caret {
+  border-right: 2px solid rgba(34, 211, 238, 0.9);
+  padding-right: 0.2rem;
+  animation: blink-caret 0.8s step-end infinite;
 }
 
 @layer utilities {
   .animation-delay-2000 {
     animation-delay: 2s;
   }
+
   .animation-delay-4000 {
     animation-delay: 4s;
   }
@@ -32,19 +63,18 @@ html {
   animation: blob 7s infinite;
 }
 
-@keyframes fade-in-down {
+@keyframes blink-caret {
   0% {
-    opacity: 0;
-    transform: translateY(-10px);
+    border-color: rgba(34, 211, 238, 0.9);
   }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
 
-.animate-fade-in-down {
-  animation: fade-in-down 0.5s ease-out;
+  50% {
+    border-color: transparent;
+  }
+
+  100% {
+    border-color: rgba(34, 211, 238, 0.9);
+  }
 }
 
 @keyframes gradient {
@@ -64,18 +94,18 @@ html {
   animation: gradient 3s ease infinite;
 }
 
-/* Professional Scroll Animations */
-@keyframes slideInUp {
-  from {
+@keyframes fade-in-down {
+  0% {
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(-10px);
   }
-  to {
+
+  100% {
     opacity: 1;
     transform: translateY(0);
   }
 }
 
-.animate-slide-in-up {
-  animation: slideInUp 0.6s ease-out forwards;
+.animate-fade-in-down {
+  animation: fade-in-down 0.5s ease-out;
 }

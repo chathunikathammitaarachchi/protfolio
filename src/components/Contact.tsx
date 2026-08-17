@@ -38,7 +38,7 @@ const Contact = () => {
       <div className="absolute inset-0 bg-[radial-gradient(,var(--tw-gradient-stops))] from-indigo-900/20 via-transparent to-cyan-900/20"></div>
       <div className="absolute top-0 right-0 w-1/2 h-full bg-linear-to-bl from-blue-900/10 via-transparent to-transparent"></div>
       <div className="absolute bottom-0 left-0 w-1/2 h-full bg-linear-to-tr from-indigo-900/10 via-transparent to-transparent"></div>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="relative z-10 mx-auto w-full max-w-384 px-3 sm:px-4 lg:px-6">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-bold text-white mb-4 tracking-tight">Get In Touch</h2>
           <div className="w-20 h-1.5 bg-linear-to-r from-cyan-400 to-blue-600 mx-auto mb-8 rounded-full"></div>
@@ -47,7 +47,7 @@ const Contact = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8 lg:gap-12 max-w-5xl mx-auto">
+        <div className="mx-auto grid max-w-6xl gap-8 md:grid-cols-2 lg:gap-12">
           <div className="bg-slate-800/80 p-8 md:p-10 rounded-3xl text-white shadow-2xl relative overflow-hidden border border-slate-700/50 backdrop-blur-sm">
              {/* Decorative circles */}
             <div className="absolute top-0 right-0 -mr-16 -mt-16 w-64 h-64 rounded-full bg-cyan-500 opacity-10 blur-3xl"></div>

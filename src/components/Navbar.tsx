@@ -16,6 +16,8 @@ const Navbar = () => {
   const navLinks = [
     { name: 'Home', href: '#home' },
     { name: 'About', href: '#about' },
+    { name: 'Experience', href: '#experience' },
+    { name: 'Education', href: '#education' },
     { name: 'Projects', href: '#projects' },
     { name: 'Contact', href: '#contact' },
   ];
@@ -24,11 +26,11 @@ const Navbar = () => {
     <nav 
       className={`fixed w-full z-50 transition-all duration-500 ease-in-out ${
         scrolled 
-          ? 'top-4 left-0 right-0 max-w-5xl mx-auto rounded-full bg-[#0B1121]/80 backdrop-blur-md shadow-lg border border-white/10 py-3 px-6' 
+          ? 'top-4 left-0 right-0 max-w-6xl mx-auto rounded-full bg-[#0B1121]/80 backdrop-blur-md shadow-lg border border-white/10 py-3 px-5' 
           : 'top-0 bg-transparent py-6'
       }`}
     >
-      <div className={`mx-auto ${scrolled ? 'w-full' : 'max-w-7xl px-4 sm:px-6 lg:px-8'}`}>
+      <div className={`mx-auto ${scrolled ? 'w-full' : 'w-full max-w-384 px-3 sm:px-4 lg:px-6'}`}>
         <div className="flex items-center justify-between h-full">
           <div className="shrink-0 flex items-center">
             <span className={`font-bold text-lg md:text-xl tracking-tight ${scrolled ? 'text-white' : 'bg-linear-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent'}`}>
