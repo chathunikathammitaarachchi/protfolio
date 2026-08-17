@@ -1,9 +1,12 @@
 import { useState, useEffect } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Sun, Moon } from 'lucide-react';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [isLightMode, setIsLightMode] = useState<boolean>(() => {
+    return localStorage.getItem('theme') === 'light';
+  });
 
   useEffect(() => {
     const handleScroll = () => {
@@ -12,6 +15,16 @@ const Navbar = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  useEffect(() => {
+    if (isLightMode) {
+      document.documentElement.classList.add('light');
+      localStorage.setItem('theme', 'light');
+    } else {
+      document.documentElement.classList.remove('light');
+      localStorage.setItem('theme', 'dark');
+    }
+  }, [isLightMode]);
 
   const navLinks = [
     { name: 'Home', href: '#home' },
@@ -30,7 +43,7 @@ const Navbar = () => {
           : 'top-0 bg-transparent py-6'
       }`}
     >
-      <div className={`mx-auto ${scrolled ? 'w-full' : 'w-full max-w-384 px-3 sm:px-4 lg:px-6'}`}>
+      <div className={`mx-auto ${scrolled ? 'w-full' : 'w-full max-w-7xl px-6 sm:px-10 lg:px-12'}`}>
         <div className="flex items-center justify-between h-full">
           <div className="shrink-0 flex items-center">
             <span className={`font-bold text-lg md:text-xl tracking-tight ${scrolled ? 'text-white' : 'bg-linear-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent'}`}>
@@ -39,7 +52,7 @@ const Navbar = () => {
           </div>
           
           <div className="hidden md:block">
-            <div className="flex items-center space-x-8">
+            <div className="flex items-center space-x-6">
               {navLinks.map((link) => (
                 <a
                   key={link.name}
@@ -52,6 +65,17 @@ const Navbar = () => {
                   <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-cyan-400 transition-all duration-300 group-hover:w-full"></span>
                 </a>
               ))}
+              
+              <button
+                type="button"
+                onClick={() => setIsLightMode(!isLightMode)}
+                className="p-2.5 rounded-full border border-slate-700 bg-slate-800/80 text-slate-300 hover:text-cyan-400 hover:border-cyan-500/50 transition-all shadow-md cursor-pointer"
+                title={isLightMode ? 'Switch to Dark Mode' : 'Switch to Light Mode'}
+                aria-label="Toggle Theme"
+              >
+                {isLightMode ? <Moon size={18} className="text-indigo-400" /> : <Sun size={18} className="text-amber-400" />}
+              </button>
+
               <a 
                 href="#contact"
                 className={`px-5 py-2 rounded-full text-sm font-medium transition-all transform hover:scale-105 ${
@@ -65,7 +89,15 @@ const Navbar = () => {
             </div>
           </div>
           
-          <div className="md:hidden">
+          <div className="flex items-center gap-3 md:hidden">
+            <button
+              type="button"
+              onClick={() => setIsLightMode(!isLightMode)}
+              className="p-2 rounded-full border border-slate-700 bg-slate-800/80 text-slate-300 hover:text-cyan-400 transition-colors"
+              title="Toggle Theme"
+            >
+              {isLightMode ? <Moon size={20} className="text-indigo-400" /> : <Sun size={20} className="text-amber-400" />}
+            </button>
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="inline-flex items-center justify-center p-2 rounded-full text-slate-300 hover:bg-slate-800 focus:outline-none transition-colors"

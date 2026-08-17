@@ -5,6 +5,193 @@
   --glass-border: rgba(148, 163, 184, 0.2);
 }
 
+html.light {
+  --glass-bg: rgba(255, 255, 255, 0.95);
+  --glass-border: rgba(203, 213, 225, 0.8);
+  color-scheme: light;
+}
+
+/* --- LIGHT MODE FULL-SITE OVERRIDES --- */
+html.light body,
+html.light section,
+html.light footer,
+html.light #home,
+html.light #about,
+html.light #experience,
+html.light #education,
+html.light #projects,
+html.light #contact {
+  background-color: #f8fafc !important;
+  color: #1e293b !important;
+}
+
+/* Clear Dark Gradient Overlay Divs in Light Mode */
+html.light #home > div.absolute,
+html.light #about > div.absolute,
+html.light #experience > div.absolute,
+html.light #education > div.absolute,
+html.light #projects > div.absolute,
+html.light #contact > div.absolute {
+  background-image: none !important;
+  background-color: transparent !important;
+}
+
+/* Background Color Overrides */
+html.light .bg-\[\#0B1121\],
+html.light .bg-\[\#020617\],
+html.light .bg-\[\#0E1629\],
+html.light .bg-slate-950,
+html.light .bg-slate-900,
+html.light .bg-slate-800,
+html.light .bg-slate-900\/30,
+html.light .bg-slate-900\/40,
+html.light .bg-slate-900\/50,
+html.light .bg-slate-900\/60,
+html.light .bg-slate-900\/80,
+html.light .bg-slate-900\/90,
+html.light .bg-slate-900\/95,
+html.light .bg-slate-800\/30,
+html.light .bg-slate-800\/40,
+html.light .bg-slate-800\/50,
+html.light .bg-slate-800\/60,
+html.light .bg-slate-800\/80,
+html.light .bg-slate-800\/90,
+html.light .bg-purple-950\/20,
+html.light .bg-purple-900\/80,
+html.light .bg-amber-950\/10,
+html.light .bg-blue-950\/10,
+html.light .bg-purple-950\/10,
+html.light .bg-emerald-950\/10 {
+  background-color: #ffffff !important;
+}
+
+/* Glass Card Overrides */
+html.light .glass-card {
+  background: rgba(255, 255, 255, 0.95) !important;
+  border-color: rgba(203, 213, 225, 0.8) !important;
+  box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.07), 0 4px 6px -2px rgba(0, 0, 0, 0.03) !important;
+}
+
+/* Font Colors in Light Mode */
+html.light .text-white,
+html.light h1, html.light h2, html.light h3, html.light h4, html.light h5, html.light h6 {
+  color: #0f172a !important;
+}
+
+html.light .text-slate-100,
+html.light .text-slate-200,
+html.light .text-slate-300 {
+  color: #334155 !important;
+}
+
+html.light .text-slate-400 {
+  color: #475569 !important;
+}
+
+html.light .text-slate-500 {
+  color: #64748b !important;
+}
+
+/* Accent Text Colors in Light Mode for high contrast readability */
+html.light .text-cyan-300,
+html.light .text-cyan-400 {
+  color: #0284c7 !important;
+}
+
+html.light .text-blue-300,
+html.light .text-blue-400 {
+  color: #2563eb !important;
+}
+
+html.light .text-indigo-300,
+html.light .text-indigo-400 {
+  color: #4f46e5 !important;
+}
+
+html.light .text-purple-300,
+html.light .text-purple-400 {
+  color: #9333ea !important;
+}
+
+html.light .text-emerald-300,
+html.light .text-emerald-400 {
+  color: #059669 !important;
+}
+
+html.light .text-amber-300,
+html.light .text-amber-400 {
+  color: #d97706 !important;
+}
+
+/* Borders in Light Mode */
+html.light .border-slate-700,
+html.light .border-slate-700\/50,
+html.light .border-slate-700\/60,
+html.light .border-slate-700\/80,
+html.light .border-slate-800,
+html.light .border-slate-800\/50,
+html.light .border-slate-800\/60,
+html.light .border-slate-800\/80,
+html.light .border-white\/10,
+html.light .border-white\/20 {
+  border-color: #cbd5e1 !important;
+}
+
+/* Inputs & Textareas in Light Mode */
+html.light input,
+html.light textarea {
+  background-color: #f8fafc !important;
+  color: #0f172a !important;
+  border-color: #cbd5e1 !important;
+}
+
+html.light input::placeholder,
+html.light textarea::placeholder {
+  color: #94a3b8 !important;
+}
+
+/* Gradient Text Inversion for Light Mode */
+html.light .from-white {
+  --tw-gradient-from: #0f172a !important;
+}
+
+html.light .to-slate-400 {
+  --tw-gradient-to: #475569 !important;
+}
+
+/* Scrolled Navbar in Light Mode */
+html.light nav.fixed {
+  background-color: rgba(255, 255, 255, 0.92) !important;
+  border-color: rgba(203, 213, 225, 0.8) !important;
+  box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.08) !important;
+}
+
+/* Mesh Grid overlay in Light Mode */
+html.light .mesh-grid {
+  background-image:
+    linear-gradient(to right, rgba(148, 163, 184, 0.15) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(148, 163, 184, 0.15) 1px, transparent 1px);
+  mask-image: radial-gradient(circle at center, black 50%, transparent 85%);
+}
+
+/* Case Study Modal Overlay in Light Mode */
+html.light .fixed.inset-0.bg-slate-950\/80 {
+  background-color: rgba(15, 23, 42, 0.6) !important;
+}
+
+/* Hide scrollbar for Modal Popup & Clean UI */
+.no-scrollbar::-webkit-scrollbar {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none !important;
+  scrollbar-width: none !important;
+}
+
+/* Core System Rules */
 html {
   scroll-behavior: smooth;
 }

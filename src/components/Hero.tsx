@@ -56,7 +56,7 @@ const Hero = () => {
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_85%,rgba(99,102,241,0.16),transparent_44%)]"></div>
       <div className="mesh-grid absolute inset-0 opacity-35"></div>
       
-      <div className="relative z-10 mx-auto flex w-full max-w-384 flex-col items-center justify-between px-3 py-12 sm:px-4 md:flex-row lg:px-6">
+      <div className="relative z-10 mx-auto flex w-full max-w-7xl flex-col items-center justify-between px-6 py-12 sm:px-10 md:flex-row lg:px-12">
         <motion.div
           initial={{ opacity: 0, y: 26 }}
           animate={{ opacity: 1, y: 0 }}
@@ -65,12 +65,12 @@ const Hero = () => {
         >
           <div className="glass-card mb-5 inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-semibold text-cyan-200">
             <Award className="h-4 w-4" />
-            <span>Available for Internship and Junior Roles</span>
+            <span>Available for Junior Roles</span>
           </div>
 
-          <h1 className="mb-6 text-4xl leading-tight font-extrabold tracking-tight text-white md:text-6xl lg:text-7xl">
+          <h1 className="mb-6 text-4xl leading-tight font-extrabold tracking-tight text-white md:text-5xl lg:text-6xl">
             Hi, I'm <br />
-            <span className="text-transparent bg-clip-text bg-linear-to-r from-cyan-400 via-blue-500 to-purple-600 animate-gradient">
+            <span className="text-transparent bg-clip-text bg-linear-to-r from-cyan-400 via-blue-500 to-purple-600 animate-gradient inline-block mt-2 font-black tracking-normal">
               Chathunika Thammitaarachchi
             </span>
           </h1>
@@ -93,7 +93,7 @@ const Hero = () => {
 
           <div className="mb-8 flex items-center justify-center gap-8 md:justify-start">
             <div className="text-center">
-              <div className="text-2xl font-bold text-white">5</div>
+              <div className="text-2xl font-bold text-white">10</div>
               <div className="text-sm text-slate-500">Featured Projects</div>
             </div>
             <div className="text-center">
@@ -149,7 +149,7 @@ const Hero = () => {
           initial={{ opacity: 0, scale: 0.96 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.2, duration: 0.7 }}
-          className="relative mt-16 flex justify-center md:mt-0 md:w-1/2"
+          className="relative mt-6 md:mt-0 flex justify-center md:w-1/2 md:-translate-y-10"
         >
           <div className="relative h-80 w-80 md:h-128 md:w-lg">
              <div className="absolute top-0 right-0 w-80 h-80 bg-blue-500 rounded-full mix-blend-multiply filter blur-[100px] opacity-20 animate-blob"></div>
@@ -168,24 +168,32 @@ const Hero = () => {
                </div>
              </div>
              
-             <div className="relative w-72 h-72 md:w-96 md:h-96 mx-auto mt-8">
-               <div className="absolute inset-0 bg-linear-to-tr from-blue-600 via-indigo-600 to-purple-600 rounded-[3rem] rotate-6 opacity-20 animate-pulse shadow-2xl"></div>
-               <div className="absolute inset-1 bg-linear-to-br from-white to-blue-50/50 rounded-[2.8rem] shadow-2xl backdrop-blur-sm"></div>
-               <div className="absolute inset-0 bg-linear-to-tr from-blue-500/10 via-transparent to-purple-500/10 rounded-[3rem] animate-pulse"></div>
-               <img 
-                 src="https://github.com/chathunikathammitaarachchi.png" 
-                 alt="Chathunika Thammitaarachchi - Software Engineer"
-                 width={640}
-                 height={640}
-                 loading="eager"
-                 decoding="async"
-                 fetchPriority="high"
-                 className="relative w-full h-full object-cover rounded-[2.8rem] shadow-2xl border-4 border-white rotate-0 hover:rotate-2 transition-all duration-700 hover:scale-105 z-10"
-               />
+             <div className="relative w-72 h-72 md:w-96 md:h-96 mx-auto -mt-6 md:-mt-12">
+               {/* Glowing Ambient Background Ring */}
+               <div className="absolute inset-0 bg-linear-to-tr from-cyan-500 via-blue-600 to-purple-600 rounded-full blur-2xl opacity-40 animate-pulse"></div>
                
-               {/* Enhanced Professional Status */}
-               <div className="absolute -bottom-3 left-1/2 transform -translate-x-1/2 bg-linear-to-r from-green-400 to-emerald-500 w-8 h-8 rounded-full border-4 border-white shadow-xl animate-pulse flex items-center justify-center">
-                 <div className="w-3 h-3 bg-white rounded-full"></div>
+               {/* Outer Gradient Border Ring */}
+               <div className="relative w-full h-full p-1.5 rounded-full bg-linear-to-tr from-cyan-400 via-blue-500 to-purple-500 shadow-2xl shadow-cyan-500/25">
+                 <div className="w-full h-full rounded-full overflow-hidden border-4 border-slate-900 bg-slate-900 relative">
+                   <img 
+                     src="/profile.jpg" 
+                     alt="Chathunika Thammitaarachchi - Software Engineer"
+                     width={640}
+                     height={640}
+                     loading="eager"
+                     decoding="async"
+                     fetchPriority="high"
+                     onError={(e) => {
+                       (e.currentTarget as HTMLImageElement).src = 'https://github.com/chathunikathammitaarachchi.png';
+                     }}
+                     className="w-full h-full object-cover object-[50%_15%] scale-105 rounded-full hover:scale-115 transition-transform duration-700"
+                   />
+                 </div>
+               </div>
+               
+               {/* Online Status Badge */}
+               <div className="absolute bottom-2 right-4 bg-linear-to-r from-emerald-400 to-green-500 p-2 rounded-full border-4 border-slate-900 shadow-xl flex items-center justify-center z-20">
+                 <div className="w-3.5 h-3.5 bg-white rounded-full animate-pulse"></div>
                </div>
              </div>
           </div>

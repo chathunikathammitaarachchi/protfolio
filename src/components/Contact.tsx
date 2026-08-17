@@ -38,7 +38,7 @@ const Contact = () => {
       <div className="absolute inset-0 bg-[radial-gradient(,var(--tw-gradient-stops))] from-indigo-900/20 via-transparent to-cyan-900/20"></div>
       <div className="absolute top-0 right-0 w-1/2 h-full bg-linear-to-bl from-blue-900/10 via-transparent to-transparent"></div>
       <div className="absolute bottom-0 left-0 w-1/2 h-full bg-linear-to-tr from-indigo-900/10 via-transparent to-transparent"></div>
-      <div className="relative z-10 mx-auto w-full max-w-384 px-3 sm:px-4 lg:px-6">
+      <div className="relative z-10 mx-auto w-full max-w-7xl px-6 sm:px-10 lg:px-12">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-bold text-white mb-4 tracking-tight">Get In Touch</h2>
           <div className="w-20 h-1.5 bg-linear-to-r from-cyan-400 to-blue-600 mx-auto mb-8 rounded-full"></div>

@@ -5,7 +5,7 @@ const Footer = () => {
     <footer className="relative overflow-hidden border-t border-slate-900 bg-slate-950 py-12 text-slate-300">
       <div className="absolute top-0 left-0 w-full h-px bg-linear-to-r from-transparent via-cyan-500/50 to-transparent"></div>
       
-      <div className="mx-auto w-full max-w-384 px-3 sm:px-4 lg:px-6">
+      <div className="mx-auto w-full max-w-7xl px-6 sm:px-10 lg:px-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
           <div className="col-span-1 md:col-span-1">
             <h3 className="text-2xl font-bold text-transparent bg-clip-text bg-linear-to-r from-cyan-400 to-blue-500 inline-block">

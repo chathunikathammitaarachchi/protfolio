@@ -15,7 +15,7 @@ const Experience = () => {
     <section id="experience" className="relative overflow-hidden bg-[#0B1121] py-20">
       <div className="absolute inset-0 bg-linear-to-b from-slate-900/40 via-transparent to-slate-900/40"></div>
 
-      <div className="relative z-10 mx-auto w-full max-w-384 px-3 sm:px-4 lg:px-6">
+      <div className="relative z-10 mx-auto w-full max-w-7xl px-6 sm:px-10 lg:px-12">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -43,7 +43,7 @@ const Experience = () => {
                 <BriefcaseBusiness className="mr-3 h-6 w-6 text-cyan-400" />
                 Software Engineering Intern
               </h3>
-              <p className="mt-1 text-base font-semibold text-cyan-300">Unitec Software Solutions</p>
+              <p className="mt-1 text-base font-semibold text-cyan-300">Unitec Software Solutions, Gampaha</p>
             </div>
             <p className="rounded-full border border-slate-700 bg-slate-900/60 px-4 py-1 text-sm font-medium text-slate-300">
               July 2025 - January 2026
