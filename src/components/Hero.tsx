@@ -136,7 +136,7 @@ const Hero = () => {
             <a href="https://www.linkedin.com/in/chathunika-thammitaarachchi-b2b9b2314/" target="_blank" rel="noopener noreferrer" className="p-3 bg-slate-800/50 rounded-xl shadow-md hover:shadow-blue-500/20 hover:text-blue-400 hover:scale-110 transition-all duration-300 border border-slate-700">
               <Linkedin size={24} />
             </a>
-            <a href="mailto:chathunikathammitaarachchi74@gmail.com" className="p-3 bg-slate-800/50 rounded-xl shadow-md hover:shadow-purple-500/20 hover:text-purple-400 hover:scale-110 transition-all duration-300 border border-slate-700">
+            <a href="mailto:dayanganichathunika@gmail.com" className="p-3 bg-slate-800/50 rounded-xl shadow-md hover:shadow-purple-500/20 hover:text-purple-400 hover:scale-110 transition-all duration-300 border border-slate-700">
               <Mail size={24} />
             </a>
             <a href="https://www.behance.net/chathunika2001" target="_blank" rel="noopener noreferrer" className="p-3 bg-slate-800/50 rounded-xl shadow-md hover:shadow-emerald-500/20 hover:text-emerald-300 hover:scale-110 transition-all duration-300 border border-slate-700">

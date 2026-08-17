@@ -13,7 +13,7 @@ const Contact = () => {
     const data = Object.fromEntries(formData.entries());
 
     try {
-      await fetch("https://formsubmit.co/ajax/chathunikathammitaarachchi74@gmail.com", {
+      await fetch("https://formsubmit.co/ajax/dayanganichathunika@gmail.com", {
         method: "POST",
         headers: { 
           'Content-Type': 'application/json',
@@ -56,13 +56,13 @@ const Contact = () => {
             <h3 className="text-3xl font-bold mb-8 relative z-10 text-white">Contact Information</h3>
             
             <div className="space-y-8 relative z-10">
-              <a href="mailto:chathunikathammitaarachchi74@gmail.com" className="flex items-start space-x-4 hover:translate-x-2 transition-transform duration-300 group">
+              <a href="mailto:dayanganichathunika@gmail.com" className="flex items-start space-x-4 hover:translate-x-2 transition-transform duration-300 group">
                 <div className="p-3 bg-slate-900/50 rounded-xl shadow-md group-hover:bg-cyan-900/40 transition-colors text-cyan-400 border border-slate-700">
                   <Mail className="w-6 h-6" />
                 </div>
                 <div>
                   <h4 className="font-semibold text-lg text-white">Email Me</h4>
-                  <p className="text-slate-400 break-all group-hover:text-cyan-400 transition-colors">chathunikathammitaarachchi74@gmail.com</p>
+                  <p className="text-slate-400 break-all group-hover:text-cyan-400 transition-colors">dayanganichathunika@gmail.com</p>
                 </div>
               </a>
 

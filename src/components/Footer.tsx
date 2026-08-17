@@ -21,7 +21,7 @@ const Footer = () => {
               <a href="https://www.linkedin.com/in/chathunika-thammitaarachchi-b2b9b2314/" target="_blank" rel="noopener noreferrer" aria-label="Open LinkedIn profile" className="rounded-full p-2 text-slate-400 transition-colors hover:bg-slate-900 hover:text-blue-400">
                 <Linkedin size={20} />
               </a>
-              <a href="mailto:chathunikathammitaarachchi74@gmail.com" aria-label="Send an email" className="rounded-full p-2 text-slate-400 transition-colors hover:bg-slate-900 hover:text-purple-400">
+              <a href="mailto:dayanganichathunika@gmail.com" aria-label="Send an email" className="rounded-full p-2 text-slate-400 transition-colors hover:bg-slate-900 hover:text-purple-400">
                 <Mail size={20} />
               </a>
               <a href="https://www.behance.net/chathunika2001" target="_blank" rel="noopener noreferrer" aria-label="Open Behance profile" className="rounded-full p-2 text-slate-400 transition-colors hover:bg-slate-900 hover:text-emerald-300">
@@ -46,8 +46,8 @@ const Footer = () => {
             <ul className="space-y-4">
               <li className="flex items-start">
                 <Mail size={18} className="mr-3 text-cyan-500 mt-1" />
-                <a href="mailto:chathunikathammitaarachchi74@gmail.com" className="text-slate-400 hover:text-cyan-300 transition-colors break-all">
-                  chathunikathammitaarachchi74@gmail.com
+                <a href="mailto:dayanganichathunika@gmail.com" className="text-slate-400 hover:text-cyan-300 transition-colors break-all">
+                  dayanganichathunika@gmail.com
                 </a>
               </li>
               <li className="flex items-start">
