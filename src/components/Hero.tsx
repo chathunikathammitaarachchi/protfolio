@@ -15,7 +15,7 @@ import {
 
 const Hero = () => {
   const roles = useMemo(
-    () => ['Full-Stack Developer', 'Software Engineering Student', 'Problem Solver'],
+    () => ['Full-Stack Developer', 'Software Engineering Graduate', 'Problem Solver'],
     []
   );
   const [roleIndex, setRoleIndex] = useState(0);
@@ -75,19 +75,19 @@ const Hero = () => {
             </span>
           </h1>
 
-          <h2 className="mb-2 text-xl font-medium text-slate-400 md:text-2xl">Software Engineering Student</h2>
+          <h2 className="mb-2 text-xl font-medium text-slate-400 md:text-2xl">Software Engineering Graduate</h2>
           <div className="mb-6 min-h-10 text-lg font-semibold text-cyan-300 md:text-2xl" aria-live="polite">
             <span className="typing-caret">{typedText}</span>
           </div>
           <p className="mb-6 block max-w-xl text-lg font-normal text-slate-400">
-            Software Engineering undergraduate with hands-on full-stack experience across React, Spring Boot, Node.js, and MongoDB, focused on clean architecture and reliable delivery.
+            Software Engineering graduate with hands-on full-stack experience across React, Spring Boot, Node.js, and MongoDB, focused on clean architecture and reliable delivery.
           </p>
 
           <div className="mb-6 inline-flex items-center gap-3 rounded-2xl border border-cyan-500/30 bg-cyan-500/10 px-4 py-3 text-left text-sm text-cyan-100 backdrop-blur-md">
             <GraduationCap className="h-5 w-5 shrink-0 text-cyan-300" />
             <div>
               <p className="font-semibold">Social Proof Badge</p>
-              <p className="text-xs text-cyan-200/90">Software Engineering Undergraduate</p>
+              <p className="text-xs text-cyan-200/90">Software Engineering Graduate</p>
             </div>
           </div>
 
@@ -101,8 +101,8 @@ const Hero = () => {
               <div className="text-sm text-slate-500">Internship</div>
             </div>
             <div className="text-center">
-              <div className="text-2xl font-bold text-white">2022</div>
-              <div className="text-sm text-slate-500">Started Degree</div>
+              <div className="text-2xl font-bold text-white">3.00</div>
+              <div className="text-sm text-slate-500">Second Lower GPA</div>
             </div>
           </div>
 
@@ -123,7 +123,7 @@ const Hero = () => {
               View My Work
               <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </a>
-            <a href="/cv/Chathunika-Dayangani-CV.pdf" download="Chathunika-Dayangani-CV.pdf" className="glass-card px-8 py-4 text-white rounded-2xl hover:border-white/20 transition-all flex items-center justify-center font-semibold shadow-lg hover:shadow-xl hover:-translate-y-1">
+            <a href="/cv/Chathunika-Dayangani-CV.html" download="Chathunika-Dayangani-CV.html" className="glass-card px-8 py-4 text-white rounded-2xl hover:border-white/20 transition-all flex items-center justify-center font-semibold shadow-lg hover:shadow-xl hover:-translate-y-1">
               <Download className="mr-2 w-5 h-5" />
               Download CV
             </a>

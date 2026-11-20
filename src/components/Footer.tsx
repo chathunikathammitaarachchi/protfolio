@@ -37,7 +37,7 @@ const Footer = () => {
               <li><a href="#about" className="text-slate-400 hover:text-cyan-400 transition-colors flex items-center hover:translate-x-1 duration-300">About Me</a></li>
               <li><a href="#projects" className="text-slate-400 hover:text-cyan-400 transition-colors flex items-center hover:translate-x-1 duration-300">Projects</a></li>
               <li><a href="#contact" className="text-slate-400 hover:text-cyan-400 transition-colors flex items-center hover:translate-x-1 duration-300">Contact</a></li>
-              <li><a href="/cv/Chathunika-Dayangani-CV.pdf" className="text-slate-400 hover:text-cyan-400 transition-colors flex items-center hover:translate-x-1 duration-300">Download CV</a></li>
+              <li><a href="/cv/Chathunika-Dayangani-CV.html" download="Chathunika-Dayangani-CV.html" className="text-slate-400 hover:text-cyan-400 transition-colors flex items-center hover:translate-x-1 duration-300">Download CV</a></li>
             </ul>
           </div>
 

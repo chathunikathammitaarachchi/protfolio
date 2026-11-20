@@ -115,7 +115,7 @@ const About = () => {
                   Professional Profile
                 </h3>
                 <p className="text-slate-300 mb-4 leading-relaxed font-medium relative z-10 text-sm sm:text-base">
-                  Motivated and detail-oriented Software Engineering undergraduate who builds full-stack applications with a practical focus on maintainability, performance, and user value.
+                  Motivated and detail-oriented Software Engineering graduate who builds full-stack applications with a practical focus on maintainability, performance, and user value.
                 </p>
                 <p className="text-slate-400 leading-relaxed relative z-10 text-sm sm:text-base">
                   I enjoy collaborating in teams, solving technical challenges, and delivering scalable solutions across frontend, backend, and database architectures.
@@ -150,7 +150,8 @@ const About = () => {
                  <span className="bg-linear-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent">Education & Specialization</span>
                </h4>
                <p className="text-cyan-300 font-bold mb-1 text-lg">BSc (Hons) in Software Engineering</p>
-               <p className="text-slate-400 text-sm mb-4 font-medium">Kaatsu International University, Koswatta, Battaramulla (2022 - Present)</p>
+               <p className="text-slate-400 text-sm mb-4 font-medium">Kaatsu International University, Koswatta, Battaramulla (2022 - 02 November 2026)</p>
+               <p className="mb-4 text-sm font-semibold text-emerald-300">Graduated with a Second Lower Division, GPA 3.00</p>
                <div className="flex flex-wrap gap-2">
                  <span className="px-3.5 py-1.5 bg-slate-900/60 text-cyan-300 rounded-xl text-xs font-semibold border border-cyan-500/30">Spring Boot</span>
                  <span className="px-3.5 py-1.5 bg-slate-900/60 text-cyan-300 rounded-xl text-xs font-semibold border border-cyan-500/30">Node.js APIs</span>
