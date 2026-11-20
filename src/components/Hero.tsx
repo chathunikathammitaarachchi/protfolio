@@ -102,7 +102,7 @@ const Hero = () => {
             </div>
             <div className="text-center">
               <div className="text-2xl font-bold text-white">3.00</div>
-              <div className="text-sm text-slate-500">Second Lower GPA</div>
+              <div className="text-sm text-slate-500">Second Class Lower GPA</div>
             </div>
           </div>
 

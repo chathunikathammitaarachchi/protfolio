@@ -151,7 +151,7 @@ const About = () => {
                </h4>
                <p className="text-cyan-300 font-bold mb-1 text-lg">BSc (Hons) in Software Engineering</p>
                <p className="text-slate-400 text-sm mb-4 font-medium">Kaatsu International University, Koswatta, Battaramulla (2022 - 02 November 2026)</p>
-               <p className="mb-4 text-sm font-semibold text-emerald-300">Graduated with a Second Lower Division, GPA 3.00</p>
+               <p className="mb-4 text-sm font-semibold text-emerald-300">Graduated with a Second Class Lower Division, GPA 3.00</p>
                <div className="flex flex-wrap gap-2">
                  <span className="px-3.5 py-1.5 bg-slate-900/60 text-cyan-300 rounded-xl text-xs font-semibold border border-cyan-500/30">Spring Boot</span>
                  <span className="px-3.5 py-1.5 bg-slate-900/60 text-cyan-300 rounded-xl text-xs font-semibold border border-cyan-500/30">Node.js APIs</span>

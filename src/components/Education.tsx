@@ -17,7 +17,7 @@ const qualifications: QualificationItem[] = [
     institute: 'Kaatsu International University, Koswatta, Battaramulla',
     period: '2022 - 02 November 2026',
     category: 'Degree',
-    note: 'Graduated with a Second Lower Division and GPA 3.00. Specialized in full-stack web application development, software design patterns, database architecture, and agile software development life cycles.',
+    note: 'Graduated with a Second Class Lower Division and GPA 3.00. Specialized in full-stack web application development, software design patterns, database architecture, and agile software development life cycles.',
     versatilityTag: 'Core Degree',
     icon: GraduationCap,
   },
